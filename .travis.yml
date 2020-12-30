@@ -14,6 +14,21 @@ node_js:
   - "0.12"
   - "0.10"
   - "0.8"
+  #Excluding below versions since they are not supported by ppc64le    
+jobs: 
+  exclude:
+    - node_js: "0.8"
+      arch: ppc64le
+    - node_js: "0.10"
+      arch: ppc64le
+    - node_js: "0.12"
+      arch: ppc64le
+    - node_js: "1"
+      arch: ppc64le
+    - node_js: "2"
+      arch: ppc64le
+    - node_js: "3"
+      arch: ppc64le  
 
 
 # NOTE: `istanbul` and `coveralls` are pinned for compatibility with node 0.8.
